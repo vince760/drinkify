@@ -9,7 +9,7 @@ const {
 } = require("../services/drinkService");
 
 //Get random on page load
-router.get("/random", async function (req, res, next) {
+router.get("/node-api/random", async function (req, res, next) {
   await getRandomDrink()
     .then((response) => {
       res.json(response);
@@ -20,7 +20,7 @@ router.get("/random", async function (req, res, next) {
 });
 
 // Get Drink By Alphacharacter
-router.get("/alpha/:alpha", async function (req, res, next) {
+router.get("/node-api/alpha/:alpha", async function (req, res, next) {
   console.log(req.params.alpha);
   const alpha = req.params.alpha;
   await getDrinkByAlpha(alpha)
@@ -33,7 +33,7 @@ router.get("/alpha/:alpha", async function (req, res, next) {
 });
 
 // Get Drink By Name
-router.get("/name/:name", async function (req, res, next) {
+router.get("/node-api/name/:name", async function (req, res, next) {
   console.log(req.params.name);
   const name = req.params.name;
   await getDrinkByName(name)
@@ -46,7 +46,7 @@ router.get("/name/:name", async function (req, res, next) {
 });
 
 // Get Drink By Ingredient
-router.get("/ingredient/:ingredient", async function (req, res, next) {
+router.get("/node-api/ingredient/:ingredient", async function (req, res, next) {
   console.log(req.params.ingredient);
   const ingredient = req.params.ingredient;
   await getDrinkByIngredient(ingredient)
@@ -58,7 +58,7 @@ router.get("/ingredient/:ingredient", async function (req, res, next) {
     });
 });
 
-router.get("/drink-id/:id", async function (req, res, next) {
+router.get("/node-api/drink-id/:id", async function (req, res, next) {
   console.log(req.params.id);
   const id = req.params.id;
   await getDrinkById(id)
