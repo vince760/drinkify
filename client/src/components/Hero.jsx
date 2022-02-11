@@ -102,7 +102,6 @@ class Hero extends React.Component {
           let measurementsArray = [];
           for (let i = 0; i < value.length; i++) {
             // Need to get the index of all ingrediants, and index of all measurements then combine them.
-            const newObject = { ingrediant: "", measurement: "" };
 
             const cleanIndex = keys[i].slice(3).replace(/[0-9]/g, "");
 
