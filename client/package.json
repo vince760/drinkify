@@ -28,6 +28,7 @@
     "eject": "react-scripts eject",
     "lint-fix-js": "eslint ./src/**/*.js --fix ",
     "lint-fix-jsx": "eslint ./src/**/*.jsx --fix "
+    
   },
   "eslintConfig": {
     "extends": [
