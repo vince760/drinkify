@@ -8,6 +8,10 @@ const {
   getDrinkById,
 } = require("../services/drinkService");
 
+router.get("/", function (req, res, next) {
+  res.render("index", { title: "Express" });
+});
+
 //Get random on page load
 router.get("/node-api/random", async function (req, res, next) {
   await getRandomDrink()
