@@ -4,7 +4,7 @@ import * as helpers from './serviceHelpers';
 const getRandomDrinks = (data) => {
   const config = {
     method: 'GET',
-    url: `${helpers.API_NODE_HOST_PREFIX}/random`,
+    url: `/random`,
     data,
     crossdomain: true,
     headers: { 'Content-Type': 'application/json' },
@@ -18,7 +18,7 @@ const getRandomDrinks = (data) => {
 const searchDrinkByAlpha = (alpha) => {
   const config = {
     method: 'GET',
-    url: `${helpers.API_NODE_HOST_PREFIX}/alpha/${alpha}`,
+    url: `/alpha/${alpha}`,
     crossdomain: true,
     headers: { 'Content-Type': 'application/json' },
   };
@@ -31,7 +31,7 @@ const searchDrinkByAlpha = (alpha) => {
 const searchByDrinkName = (name) => {
   const config = {
     method: 'GET',
-    url: `${helpers.API_NODE_HOST_PREFIX}/name/${name}`,
+    url: `/name/${name}`,
     crossdomain: true,
     headers: { 'Content-Type': 'application/json' },
   };
@@ -44,7 +44,7 @@ const searchByDrinkName = (name) => {
 const searchByIngredient = (ingredient) => {
   const config = {
     method: 'GET',
-    url: `${helpers.API_NODE_HOST_PREFIX}/ingredient/${ingredient}`,
+    url: `/ingredient/${ingredient}`,
     crossdomain: true,
     headers: { 'Content-Type': 'application/json' },
   };
@@ -57,7 +57,7 @@ const searchByIngredient = (ingredient) => {
 const searchById = (id) => {
   const config = {
     method: 'GET',
-    url: `${helpers.API_NODE_HOST_PREFIX}/drink-id/${id}`,
+    url: `/drink-id/${id}`,
     crossdomain: true,
     headers: { 'Content-Type': 'application/json' },
   };
